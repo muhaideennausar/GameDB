@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Image Fetcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Phase 1: Initial Welcome -->
+    <div class="phase" id="phase1">
+        <div class="container">
+            <h1>Steam Image Finder</h1>
+            <button onclick="nextPhase(true)">Get Started</button>
+        </div>
+    </div>
+
+    <!-- Phase 2: Input Form -->
+    <div class="phase" id="phase2">
+        <div class="container">
+            <h2>Find Game Assets</h2>
+            <div class="input-group">
+                <input type="text" id="gameInput" placeholder="Steam URL or App ID (e.g. 730)">
+                <button onclick="handleSearch()">Find Images</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Phase 3: Results -->
+    <div class="phase" id="phase3">
+        <div class="container">
+            <button class="back-btn" onclick="prevPhase()">← Back</button>
+            <h2>Game Assets</h2>
+            <div id="results" class="image-grid"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+:root {
+    --primary: #1b2838;
+    --secondary: #c6d4df;
+    --accent: #66c0f4;
+    --card-bg: #171a21;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: var(--primary);
+    color: var(--secondary);
+    margin: 0;
+    min-height: 100vh;
+}
+
+.phase {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--primary);
+    animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.phase.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: min(90%, 800px);
+    padding: 2rem;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+input {
+    flex: 1;
+    padding: 0.8rem;
+    background: var(--card-bg);
+    border: 1px solid #2a475e;
+    color: white;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    background: var(--accent);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin: 1rem 0;
+    background: #0003;
+    border-radius: 4px;
+}
+
+.card-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.back-btn {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    background: none;
+    color: var(--accent);
+    padding: 0.5rem 1rem;
+}
